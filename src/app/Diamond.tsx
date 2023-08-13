@@ -1,24 +1,17 @@
-import { useEffect, useRef } from 'react'
-import { Canvas, useFrame, useLoader } from '@react-three/fiber'
+import { useRef } from 'react'
+import { useFrame, useLoader } from '@react-three/fiber'
 import {
   useGLTF,
   Caustics,
   CubeCamera,
-  Environment,
-  OrbitControls,
-  RandomizedLight,
-  AccumulativeShadows,
   MeshRefractionMaterial,
-  MeshTransmissionMaterial
 } from '@react-three/drei'
-import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { useControls } from 'leva'
-import { RGBELoader } from 'three-stdlib'
 import { TextureLoader } from 'three'
 
-export default function Diamond(props) {
+export default function Diamond() {
   const ref = useRef()
-  const { nodes, materials } = useGLTF('/images/dflat.glb')
+  const { nodes } = useGLTF('/images/dflat.glb')
   const texture = useLoader(TextureLoader, '/images/karen_2.png')
   
   const config = useControls({
@@ -32,8 +25,6 @@ export default function Diamond(props) {
 
   useFrame(() => {
     if (ref.current) {
-      // ref.current.rotation.z += 0.001
-      // ref.current.rotation.y += 0.001
       ref.current.rotation.y += 0.001
 
     }
