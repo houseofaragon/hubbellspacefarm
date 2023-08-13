@@ -1,0 +1,7 @@
+**/*.tsx
+
+# Ignore Next.js build output
+.next/
+
+# Ignore the "out" directory
+out/
