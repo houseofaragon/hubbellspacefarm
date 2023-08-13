@@ -3,8 +3,8 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 export default function Ufo(props: JSX.IntrinsicElements['group']) {
-  const group = useRef()
-  const { nodes, materials, animations } = useGLTF('scene-transformed.glb')
+  const group = useRef<any>()
+  const { nodes, materials, animations } = useGLTF('scene-transformed.glb') as any
 
   useFrame(() => {
     if (group.current) {
