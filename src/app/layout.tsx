@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import React from 'react'
+import Sidebar from './sidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body id="root">{children}</body>
+      <body id="root">
+        <p className="text-4xl text-white absolute z-50">Hubbell Space Farm</p>
+        <Sidebar />
+        {children}
+      </body>
     </html>
   )
 }

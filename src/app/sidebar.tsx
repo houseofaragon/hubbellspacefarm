@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 
 export default function Sidebar() {
@@ -15,16 +16,16 @@ export default function Sidebar() {
             >
                 <ul>
                     <li className="mb-5">
-                        <a href="#home" className="text-lg">Home</a>
+                        <a href="/" className="text-lg">Home</a>
                     </li>
                     <li className="mb-5">
-                        <a href="#projects" className="text-lg">Projects</a>
+                        <a href="/projects" className="text-lg">Projects</a>
                     </li>
                     <li className="mb-5">
-                        <a href="#events" className="text-lg">Events</a>
+                        <a href="/events" className="text-lg">Events</a>
                     </li>
                     <li className="mb-5">
-                        <a href="#contact" className="text-lg">Contact</a>
+                        <a href="/contact" className="text-lg">Contact</a>
                     </li>
                 </ul>
             </div>
